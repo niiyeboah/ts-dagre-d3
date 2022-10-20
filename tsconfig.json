@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
+    "allowJs": true,
     "inlineSources": true,
     "module": "ES2020",
-    "target": "ES2020",
     "moduleResolution": "node",
-    "strict": true,
+    "outDir": "dist",
     "skipLibCheck": true,
-    "outDir": "out-tsc"
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2020"
   },
   "include": ["src/*"]
 }

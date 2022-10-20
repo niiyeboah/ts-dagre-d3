@@ -2,13 +2,13 @@
   "name": "ts-dagre-d3",
   "version": "0.1.1",
   "description": "Modified version of dagre-d3, compatible with TypeScript.",
-  "main": "out-tsc/dagre-d3.js",
-  "module": "out-tsc/dagre-d3.js",
+  "main": "dist/dagre-d3.js",
+  "module": "dist/dagre-d3.js",
   "types": "src/dagre-d3.ts",
   "author": "Nii Yeboah <yeboah.nii@gmail.com>",
   "license": "MIT",
   "files": [
-    "out-tsc",
+    "dist",
     "src"
   ],
   "repository": {
@@ -36,6 +36,6 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublish": "npm run build"
   }
 }
