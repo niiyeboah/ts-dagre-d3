@@ -1,6 +1,6 @@
 {
   "name": "ts-dagre-d3",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Modified version of dagre-d3, compatible with TypeScript.",
   "main": "src/dagre-d3.js",
   "module": "src/dagre-d3.js",
