@@ -1,4 +1,4 @@
-'use strict';
+// ORIGINAL: dagre-d3/lib/position-edge-labels.js
 
 var util = require('dagre-d3/lib/util');
 var d3 = require('dagre-d3/lib/d3');
