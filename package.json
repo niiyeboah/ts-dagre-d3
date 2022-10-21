@@ -1,6 +1,6 @@
 {
   "name": "ts-dagre-d3",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Modified version of dagre-d3, compatible with TypeScript.",
   "main": "dist/dagre-d3.js",
   "module": "dist/dagre-d3.js",
@@ -36,12 +36,14 @@
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@web/dev-server": "^0.1.35",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "rollup": "^3.2.3",
     "rollup-plugin-copy": "^3.4.0"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "build": "rollup -c",
-    "prepublish": "npm run build",
-    "start": "wds --node-resolve --open"
+    "prepublishOnly": "run-s clean build"
   }
 }
