@@ -1,5 +1,5 @@
-import * as OrignalDagreD3 from 'dagre-d3';
-import * as render from './dagre-d3-render';
-
-export const dagreD3 = { ...OrignalDagreD3, render };
-export * as d3 from 'd3';
+exports.d3 = require('d3');
+exports.dagreD3 = {
+  ...require('dagre-d3'),
+  render: require('./dagre-d3-render')
+};

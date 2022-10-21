@@ -2,8 +2,8 @@
   "name": "ts-dagre-d3",
   "version": "0.1.8",
   "description": "Modified version of dagre-d3, compatible with TypeScript.",
-  "main": "src/dagre-d3.js",
-  "module": "src/dagre-d3.js",
+  "main": "dist/dagre-d3.js",
+  "module": "dist/dagre-d3.js",
   "types": "src/dagre-d3.d.ts",
   "type": "module",
   "author": "Nii Yeboah <yeboah.nii@gmail.com>",
@@ -31,5 +31,17 @@
     "@types/dagre-d3": "0.6.3",
     "d3": "5.16.0",
     "dagre-d3": "0.6.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@web/dev-server": "^0.1.35",
+    "rollup": "^3.2.3",
+    "rollup-plugin-copy": "^3.4.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build",
+    "start": "wds --node-resolve --open"
   }
 }

@@ -1,6 +1,4 @@
 // ORIGINAL: dagre/lib/layout.js
-'use strict';
-
 var _ = require(`dagre/lib/lodash`);
 var acyclic = require('dagre/lib/acyclic');
 var normalize = require('dagre/lib/normalize');

@@ -1,5 +1,5 @@
-export * as dagreD3 from 'dagre-d3';
 export * as d3 from 'd3';
+export * as dagreD3 from 'dagre-d3';
 export declare namespace D3 {
   type Point = dagreD3.Point;
   type PointArray = [x: number, y: number];
