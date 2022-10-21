@@ -1,10 +1,11 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import copy from 'rollup-plugin-copy';
+import { terser } from 'rollup-plugin-terser';
 
-export default {
+const raw = {
   input: 'src/dagre-d3.js',
-  output: { format: 'es', dir: 'dist' },
+  output: { file: 'dist/dagre-d3.js', format: 'es' },
   plugins: [
     commonjs(),
     nodeResolve(),
@@ -13,3 +14,11 @@ export default {
     })
   ]
 };
+
+const minified = {
+  ...raw,
+  output: { file: 'dist/dagre-d3.min.js', format: 'es' },
+  plugins: [...raw.plugins, terser()]
+};
+
+export default [raw, minified];
