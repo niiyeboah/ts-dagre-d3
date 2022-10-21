@@ -16,7 +16,7 @@ function render() {
   var shapes = require('dagre-d3/lib/shapes');
   var arrows = require('dagre-d3/lib/arrows');
 
-  var fn = function (svg, g) {
+  var fn = function (svg, g, options = {}) {
     preProcessGraph(g);
 
     if (typeof options.edgeLabelX !== 'number') options.edgeLabelX = 10;
